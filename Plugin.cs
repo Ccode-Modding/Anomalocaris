@@ -29,7 +29,7 @@ namespace Anomalocaris
             var Node = Assets.MainAssetBundle.LoadAsset<TerminalNode>("AnomalocarisTN");
             var Keyword = Assets.MainAssetBundle.LoadAsset<TerminalKeyword>("AnomalocarisKW");
 
-            RegisterEnemy(AnomalocarisEnemy, 999, LethalLib.Modules.Levels.LevelTypes.All, SpawnType.Daytime, Node, Keyword);
+            RegisterEnemy(AnomalocarisEnemy, 60, LethalLib.Modules.Levels.LevelTypes.All, Node, Keyword);
             Log = Logger;
             Log.LogInfo(NAME + " mod version " + VERSION + " loaded.");
 
