@@ -1,6 +1,7 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using LethalLib;
+using LethalLib.Modules;
 using System;
 using System.IO;
 using System.Reflection;
@@ -28,6 +29,8 @@ namespace Anomalocaris
             AnomalocarisEnemy = Assets.MainAssetBundle.LoadAsset<EnemyType>("AnomalocarisEnemy");
             var Node = Assets.MainAssetBundle.LoadAsset<TerminalNode>("AnomalocarisTN");
             var Keyword = Assets.MainAssetBundle.LoadAsset<TerminalKeyword>("AnomalocarisKW");
+
+            NetworkPrefabs.RegisterNetworkPrefab(AnomalocarisEnemy.enemyPrefab);
 
             RegisterEnemy(AnomalocarisEnemy, 60, LethalLib.Modules.Levels.LevelTypes.All, Node, Keyword);
             Log = Logger;
