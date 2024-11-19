@@ -18,4 +18,8 @@
     <PackageReference Include="LethalCompany.GameLibs.Steam" Version="67.0.0-ngd.0" />
   </ItemGroup>
 
+  <Target Name="NetcodePatch" AfterTargets="PostBuildEvent">
+    <Exec Command="netcode-patch &quot;$(TargetPath)&quot; @(ReferencePathWithRefAssemblies->'&quot;%(Identity)&quot;', ' ')" />
+  </Target>
+
 </Project>
