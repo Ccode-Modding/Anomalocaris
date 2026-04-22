@@ -14,8 +14,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Evaisa.LethalLib" Version="1.1.1" />
-    <PackageReference Include="LethalCompany.GameLibs.Steam" Version="73.0.0-ngd.0" />
+    <PackageReference Include="Evaisa.LethalLib" Version="1.2.0" />
+    <PackageReference Include="LethalCompany.GameLibs.Steam" Version="81.0.0-ngd.0" />
   </ItemGroup>
 
   <Target Name="NetcodePatch" AfterTargets="PostBuildEvent">
